@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title> Login page</title>
+        <style>
+            body{
+                background-image: url("grocery\ 1.png");
+                background-repeat: no-repeat ;
+                background-size:cover;
+                color:rgb(10, 3, 3);                           
+            }
+            form{
+               margin-left: 200px;
+                height: 100px;
+                width: 300px;
+                background-image: url("genuine3.jpeg");
+                background-size: contain;
+                border: 10px solid rgb(255, 0, 0);
+                border-style:groove;
+                padding: 70px;
+                border-radius: 50px;
+            }           
+        </style>
+    </head>
+    <body>  
+            <center><h1>GROCERY STORE </h1> 
+                    <form id="loginForm">
+                        <label for="role" class="z">Select Role:</label>
+                        <select id="role" required>
+                            <option value="">Select your role</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select><br><br>
+            
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter your username" required><br><br>
+            
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password" required><br><br>
+            
+                        <button type="submit">Login</button>
+                    </form>
+                    <!-- Error message display -->
+                    <p id="error-message" style="color: red; display: none;">Invalid login details. Please try again.</p>
+        </center>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const role = document.getElementById('role').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        if (role && username && password) {
+            if (role === 'admin') {
+                // Redirect to Admin Dashboard
+                window.location.href = "admin.html";
+            } else if (role === 'user') {
+                // Redirect to User Dashboard
+                window.location.href = 'Groceryshop.html';
+            } else {
+                alert('Please select a valid role.');
+            }
+        } else {
+            alert('Please fill out all fields.');
+        }
+    });
+    </script>
+    </body>
+</html>

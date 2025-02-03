@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Groceryshop</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard - Grocery</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Manage products</h2>
+        <div class="form-container">
+            <h3>Add a New Products</h3>
+            <form id="addPetForm">
+                <label for="name">Product Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="Quantity">Quantity:</label>
+                <select id="Quantity" required>
+                    <option value="one">one</option>
+                    <option value="two">two</option>
+                    <option value="three">three</option>
+                    <option value="four">four</option>
+                </select>
+
+                <label for="price">price:</label>
+                <input type="text" id="price" required>
+
+                <button type="submit">Add Products</button>
+            </form>
+        </div>  
+        <div class="list-container">
+            <h3>Current Pets for Adoption</h3>
+            <table id="petTable">
+                <thead>
+                    <tr>
+                        <th>product Name</th>
+                        <th>Quantity</th>
+                        <th>price</th>                      
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
